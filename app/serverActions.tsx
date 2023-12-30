@@ -2,6 +2,7 @@
 require('dotenv').config();
 import { cookies } from "next/headers";
 import { useRouter } from "next/router";
+export const dynamic = 'force-dynamic'
 
 export async function findParticipants(grpId: string) {
     console.log(grpId);
