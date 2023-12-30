@@ -1,8 +1,7 @@
 'use server'
 require('dotenv').config();
 import { cookies } from "next/headers";
-import { useRouter } from "next/router";
-export const dynamic = 'force-dynamic'
+// export const dynamic = 'force-dynamic'
 
 export async function findParticipants(grpId: string) {
     console.log(grpId);
@@ -108,7 +107,5 @@ export const addExpense = async (amount: string,description: string,groupId: str
     } catch (error) {
       console.error('Error creating group:', error);
     }
-  
-    // onClickHandler();
     // router.refresh();
   };
