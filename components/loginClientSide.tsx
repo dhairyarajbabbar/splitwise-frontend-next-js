@@ -1,16 +1,11 @@
 'use client'
 import React, { useEffect, useState } from 'react';
-import { RootState } from '@/app/redux/store';
 import { useRouter } from 'next/navigation';
-import { useSelector, useDispatch } from 'react-redux';
 import Cookies from 'js-cookie';
-// import { loginUser } from '../app/redux/reducers/authSlice';
 
 const LoginPage: React.FC = () => {
-  const user = useSelector((state: RootState) => state.auth.user);
-  const userEmail = user ? user.email : '';
   const router = useRouter();
-  const [email, setEmail] = useState<string>(userEmail);
+  const [email, setEmail] = useState<string>("");
   const [password, setPassword] = useState<string>("");
   interface LoginResponse {
     token: string;

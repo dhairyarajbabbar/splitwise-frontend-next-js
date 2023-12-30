@@ -4,7 +4,7 @@ import React, { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { usePathname } from 'next/navigation'
 import { addExpense } from '../app/serverActions';
-import { revalidatePath } from 'next/cache';
+// import { revalidatePath } from 'next/cache';
 interface AddExpensePromtProps {
   onClickHandler: () => void;
 }

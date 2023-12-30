@@ -1,9 +1,3 @@
-// app/login/page.tsx
-// 'use client'
-// import { RootState } from '../redux/store';
-// import {useRouter} from 'next/navigation';
-// import { useSelector, useDispatch } from 'react-redux';
-// import { loginUser } from '../redux/reducers/authSlice';
 import React, { useState } from 'react';
 import LoginClientSide from '../../components/loginClientSide';
 import { cookies } from 'next/headers';

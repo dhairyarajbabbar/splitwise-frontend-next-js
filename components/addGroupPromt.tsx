@@ -1,9 +1,7 @@
 // Import necessary modules and types
 import React, { useState, useEffect } from 'react';
-import { useRouter } from 'next/navigation';
-import { useSelector } from 'react-redux';
+import { useRouter } from 'next/navigation';               
 import { addGroup } from '../app/serverActions';
-import { RootState } from '@/app/redux/store';
 
 interface AddGroupPromtProps {
     onClickHandler: () => void;
