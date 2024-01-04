@@ -9,9 +9,9 @@ async function getData() {
     const cookieStore = cookies();
     const cook = cookieStore.get('accessToken');
 
-    // if (!accessToken) {
-    //   redirect("/login");
-    // }
+    if (!cook) {
+      redirect("/login");
+    }
 
     const res = await fetch(url, {
       method: 'GET',
