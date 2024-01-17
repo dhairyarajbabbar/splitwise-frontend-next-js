@@ -66,6 +66,12 @@ const LoginPage: React.FC = () => {
             Login
           </button>
         </form>
+        <button
+          onClick={() => router.push("/signup")}
+          className="w-full mt-4 bg-blue-500 text-white p-3 rounded hover:bg-blue-600 focus:outline-none"
+        >
+          Sign Up
+        </button>
       </div>
     </div>
   );
