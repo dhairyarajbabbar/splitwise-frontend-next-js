@@ -20,7 +20,7 @@ const LoginPage: React.FC = () => {
     formData.append('email', email);
     formData.append('password', password);
     try {
-      const response = await fetch(`https://splitwise-lvh3.onrender.com/api/login`, {
+      const response = await fetch(`https://splitwise-backend.vercel.app/api/login`, {
       // const response = await fetch(`http://localhost:4000/api/login`, {
         method: "POST",
         headers: {

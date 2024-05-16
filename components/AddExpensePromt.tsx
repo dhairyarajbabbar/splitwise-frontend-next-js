@@ -20,35 +20,6 @@ const AddExpensePromt: React.FC<AddExpensePromtProps> = ({ onClickHandler }) => 
   const [description, setdescription] = useState("");
   const [amount, setamount] = useState("");
 
-  // const addExpense = async () => {
-  //   const apiUrl = `https://splitwise-lvh3.onrender.com/api/groupexpense`;
-  //   const formData = new URLSearchParams();
-  //   formData.append('amount', amount);
-  //   formData.append('description', description);
-  //   formData.append('groupId', lastPart || "none");
-
-  //   let participants = await findParticipants(lastPart);
-  //   participants = participants.group.members;
-  //   let userList: string[] = participants.map((participant: Participant) => participant.user);
-  //   let userList1 = JSON.stringify(userList);
-  //   formData.append('participants', userList1);
-  //   try {
-  //     const response = await fetch(apiUrl, {
-  //       method: 'POST',
-  //       credentials: 'include',
-  //       headers: {
-  //         'content-Type': 'application/x-www-form-urlencoded'
-  //       },
-  //       mode: 'cors',
-  //       body: formData,
-  //     });
-  //   } catch (error) {
-  //     console.error('Error creating group:', error);
-  //   }
-  //   onClickHandler();
-  //   router.refresh();
-  // }
-
   const addExpensehandler = async () => {
     onClickHandler();
     addExpense(amount, description, lastPart);

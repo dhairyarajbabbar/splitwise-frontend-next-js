@@ -4,7 +4,7 @@ import Link from "next/link";
 import { redirect } from 'next/navigation';
 import React from 'react';
 
-const url = `https://splitwise-lvh3.onrender.com/api/user/group`;
+const url = `https://splitwise-backend.vercel.app/api/user/group`;
 
 async function getData() {
   const cookieStore = cookies();

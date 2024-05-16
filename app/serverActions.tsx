@@ -5,7 +5,7 @@ import { cookies } from "next/headers";
 
 export async function findParticipants(grpId: string) {
     console.log(grpId);
-    const url = `https://splitwise-lvh3.onrender.com/api/group/${grpId}`;
+    const url = `https://splitwise-backend.vercel.app/api/group/${grpId}`;
 
     const cookieStore = cookies();
     const cook = cookieStore.get('accessToken');
@@ -25,7 +25,7 @@ export async function addFriend(friendEmail: string) {
     const formdata = new URLSearchParams();
     formdata.append('friendemail', friendEmail);
     // const apiUrl = `http://localhost:4000/api/user/friend/`;
-    const apiUrl = `https://splitwise-lvh3.onrender.com/api/user/friend/`;
+    const apiUrl = `https://splitwise-backend.vercel.app/api/user/friend/`;
     try {
         const cookieStore = cookies();
         const cook = cookieStore.get('accessToken');
@@ -50,7 +50,7 @@ export async function addFriend(friendEmail: string) {
 export const addGroup = async (groupName: string, members: { name: string, email: string }[]) => {
     const memberData = members.map((member) => member.email);
     // const apiUrl = `http://localhost:4000/api/group`;
-    const apiUrl = `https://splitwise-lvh3.onrender.com/api/group`;
+    const apiUrl = `https://splitwise-backend.vercel.app/api/group`;
     const formData = new URLSearchParams();
     formData.append('name', groupName);
     memberData.forEach((email) => {
@@ -80,7 +80,7 @@ export const addGroup = async (groupName: string, members: { name: string, email
 };
 
 export const addExpense = async (amount: string,description: string,groupId: string) => {
-    const apiUrl = `https://splitwise-lvh3.onrender.com/api/groupexpense`;
+    const apiUrl = `https://splitwise-backend.vercel.app/api/groupexpense`;
     const formData = new URLSearchParams();
     formData.append('amount', amount);
     formData.append('description', description);

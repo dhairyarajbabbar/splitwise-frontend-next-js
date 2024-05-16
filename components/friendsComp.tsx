@@ -2,7 +2,7 @@ import { cookies } from "next/headers";
 import { redirect } from "next/navigation";
 import React from 'react';
 
-const url = `https://splitwise-lvh3.onrender.com/api/user/friend`;
+const url = `https://splitwise-backend.vercel.app/api/user/friend`;
 
 async function getData() {
   try {

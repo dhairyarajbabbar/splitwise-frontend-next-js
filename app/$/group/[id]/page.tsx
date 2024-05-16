@@ -8,7 +8,7 @@ async function getgroupData() {
   const regex = /\/group\/([^\/]+)$/;
   const match = fullUrl.match(regex);
   const extractedValue: string = match ? match[1] || "" : "";
-  const url = `https://splitwise-lvh3.onrender.com/api/group/${extractedValue}`;
+  const url = `https://splitwise-backend.vercel.app/api/group/${extractedValue}`;
   const cookieStore = cookies();  // Correct: cookies() without parentheses
   const cook = cookieStore.get('accessToken');
   const res = await fetch(url, {

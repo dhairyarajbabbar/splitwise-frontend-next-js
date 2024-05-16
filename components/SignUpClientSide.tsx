@@ -15,7 +15,7 @@ const SignUpPage: React.FC = () => {
     formData.append('password', password);
     formData.append('name', name);
     try {
-      const response = await fetch(`https://splitwise-lvh3.onrender.com/api/signup`, {
+      const response = await fetch(`https://splitwise-backend.vercel.app/api/signup`, {
         method: "POST",
         headers: {
           'Content-Type': 'application/x-www-form-urlencoded'
